@@ -1,0 +1,286 @@
+:root{
+  --main-color: #ec1b00;
+  --main-transition: 0.3s;
+  --secondry-color: #002a6a;
+  --background-color: #f0f6ff80;
+  --main-padding: 50px;
+}
+img{
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+}
+header{
+  background-color: var(--background-color);
+  backdrop-filter: blur(10px);
+}
+.navbar-toggler{
+  border: 2px solid var(--secondry-color);
+}
+.navbar-toggler:focus{
+  box-shadow: none;
+}
+.fa-bars{
+  color: #0e3268;
+}
+.navbar-brand img{
+  width: 100px;
+}
+.nav-link{
+  color: #000;
+  font-weight: 700;
+  font-size: 17px;
+  color: var(--secondry-color);
+}
+.navbar-nav .nav-link.active, .navbar-nav .nav-link.show{
+  color: var(--main-color);
+}
+.nav-link:hover{
+  color: var(--main-color);
+  transition: 0.3s;
+}
+.carousel-indicators{
+  flex-direction: column;
+  bottom: 25%;
+  left: -13%;
+}
+.carousel-indicators [data-bs-target]{
+  width: 10px;
+  height: 10px;
+  border-radius: 50%;
+  margin: -6px;
+}
+.marketing{
+  padding-top: var(--main-padding);
+  padding-bottom: var(--main-padding);
+}
+.marketing .parent{
+  display: grid;
+  grid-template-columns: repeat(auto-fit,minmax(275px,1fr));
+  gap: 15px;
+  color: var(--secondry-color);
+}
+.marketing .parent :first-child{
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  gap: 35px;
+}
+.marketing .h1{
+  max-width: 400px;
+  font-weight: bold;
+  color: var(--main-color);
+}
+.marketing .parent p{
+  margin-bottom: 0;
+  font-size: 10px;
+  font-weight: 600;
+  text-transform: uppercase;
+  position: relative;
+}
+.marketing .parent p::after{
+  content: "";
+  position: absolute;
+  height: 1px;
+  width: 90px;
+  top: 50%;
+  left: 175px;
+  transform: translateX(-50%);
+  background-color: var(--secondry-color);
+}
+.marketing .parent h2{
+  max-width: 700px;
+}
+.partners{
+  padding-bottom: var(--main-padding);
+  padding-top: var(--main-padding);
+  background-color: var(--background-color);
+}
+.partners h2,
+.services h2{
+  color: var(--secondry-color);
+  text-align: center;
+  margin-bottom: 35px;
+  font-weight: 700;
+  position: relative;
+  z-index: 1;
+}
+.partners .container{
+  display: grid;
+  grid-template-columns: repeat(auto-fit,minmax(275px,1fr));
+  gap: 60px;
+}
+.partners .container .person{
+  position: relative;
+  color: #fff;
+  z-index: 1;
+  text-align: center;
+  transition: var(--main-transition);
+  bottom: 0;
+}
+.partners .container .person::after{
+  content: "";
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  height: 70%;
+  background-color: var(--main-color);
+  box-shadow: rgba(0, 0, 0, 0.15) 0px 5px 15px 0px;
+  transition: var(--main-transition);
+  z-index: -1;
+}
+.partners .container .person::after,
+.partners .container .person .image img{
+  border-radius: 20px;
+}
+.partners .container .content{
+  padding: 0 15px 15px;
+  display: flex;
+  flex-direction: column;
+  gap: 5px;
+}
+.partners .container .content > *{
+  margin: 0;
+}
+.partners .container .content h3{
+  font-weight: 700;
+}
+.partners .container .content p:not(p:first-child){
+  font-style: italic;
+}
+.services{
+  padding-top: var(--main-padding);
+  padding-bottom: var(--main-padding);
+}
+.services .container{
+  display: grid;
+  grid-template-columns: repeat(auto-fit,minmax(275px,1fr));
+  gap: 80px;
+}
+.services .container .service{
+  color: #fff;
+  text-align: center;
+  position: relative;
+  z-index: 1;
+  bottom: 0;
+  transition: var(--main-transition);
+
+}
+.services .container .service::after{
+  content: "";
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  height: 70%;
+  width: 100%;
+  background-color: var(--secondry-color);
+  box-shadow: rgba(0, 0, 0, 0.15) 0px 5px 15px 0px;
+  transition: var(--main-transition);
+  z-index: -1;
+}
+.partners .container .person:hover,
+.services .container .service:hover{
+  bottom: 10px;
+}
+.partners .container .person:hover::after,
+.services .container .service:hover::after{
+  box-shadow: rgba(0, 0, 0, 0.2) 0px 12px 28px 0px, rgba(0, 0, 0, 0.1) 0px 2px 4px 0px, rgba(255, 255, 255, 0.05) 0px 0px 0px 1px inset;
+}
+.services .container .service .image{
+  padding: 0 25px;
+}
+.services .container .service::after,
+.services .container .service .image img{
+  border-radius: 20px;
+}
+.services .container .service h3{
+  font-weight: 700;
+  font-size: 18px;
+  height: 65px;
+  padding-top: 20px;
+}
+footer{
+  padding-top: var(--main-padding);
+  padding-bottom: var(--main-padding);
+  background-image: url(../Img/back.webp);
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+footer .container{
+  display: grid;
+  grid-template-columns: repeat(auto-fit,minmax(275px,1fr));
+  gap: 60px;
+  color: #fff;
+}
+footer .container > :first-child .image{
+  width: 150px;
+  margin-bottom: 15px;
+}
+footer .container > :first-child p{
+  font-size: 14px;
+  line-height: 1.9;
+  font-weight: 700;
+}
+footer .container > :first-child p span{
+  color: var(--main-color);
+}
+footer .container > :nth-child(2) p,
+footer .container > :last-child p{
+  font-size: 18px;
+  font-weight: 700;
+}
+footer .container > :nth-child(2) ul,
+footer .container > :nth-child(3) ul{
+  font-size: 15px;
+  list-style-type: none;
+  display: flex;
+  flex-direction: column;
+  gap: 11px;
+  padding-left: 0;
+}
+footer .container > :nth-child(2) ul li{
+  position: relative;
+  left: 0;
+  transition: var(--main-transition);
+}
+footer .container > :nth-child(2) ul li:hover{
+  left: 10px;
+  color: var(--main-color);
+  cursor: pointer;
+}
+footer .container > :nth-child(3) a{
+  color: #fff;
+  text-decoration: none;
+  transition: var(--main-transition);
+}
+footer .container > :nth-child(3) a:hover{
+  color: var(--main-color);
+}
+.socials{
+  display: flex;
+  align-items: center;
+  list-style-type: none;
+  padding-left: 0;
+  font-size: 25px;
+  gap: 20px;
+}
+.socials *{ 
+  color: var(--main-color);
+}
+@media (min-width: 768px){
+  .navbar-expand-md .navbar-collapse{
+    justify-content: end;
+  }
+}
+@media (max-width: 768px){
+  .landing{
+    display: none;
+  }
+  .marketing{
+    margin-top: 50px;
+  }
+  .marketing .parent :first-child{
+    justify-content: center;
+  }
+}
