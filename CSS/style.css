@@ -13,6 +13,7 @@ img{
 header{
   background-color: var(--background-color);
   backdrop-filter: blur(10px);
+  -webkit-backdrop-filter: blur(10px);
 }
 .navbar-toggler{
   border: 2px solid var(--secondry-color);
@@ -72,6 +73,7 @@ header{
   color: var(--main-color);
 }
 .marketing .parent p{
+  width: fit-content;
   margin-bottom: 0;
   font-size: 10px;
   font-weight: 600;
@@ -84,7 +86,7 @@ header{
   height: 1px;
   width: 90px;
   top: 50%;
-  left: 175px;
+  left: 140%;
   transform: translateX(-50%);
   background-color: var(--secondry-color);
 }
@@ -148,6 +150,7 @@ header{
 }
 .partners .container .content p:not(p:first-child){
   font-style: italic;
+  color: #fff;
 }
 .services{
   padding-top: var(--main-padding);
